@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::resource('celdas','CeldasController');
 Route::resource('vehiculos','VehiculosController');
+Route::resource('vehiculosparqueados','VehiculosParqueadosController');
