@@ -10,10 +10,10 @@ export class CommitsService {
     this.buscarValores()
   }
   buscarValores(){
-
     this.datosCommit = []
     this.datosCommit = [
-      { "version":"v0.0.5","commitId":"commit 07003c35bf50b48c0be78e6f075e1bb66c3db051  (HEAD -> CU7, tag: v0.0.6, origin/develop, develop, CU6) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
+      { "version":"v0.0.7","commitId":"commit 5dfb2dec153b074f7fa79b40307d7d485af13524  (HEAD -> CU8, tag: v0.0.7, origin/develop, develop, CU7) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
+      { "version":"v0.0.6","commitId":"commit 07003c35bf50b48c0be78e6f075e1bb66c3db051  (HEAD -> CU7, tag: v0.0.6, origin/develop, develop, CU6) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
       { "version":"v0.0.5","commitId":"commit 4e6654d06dfcc5a470987e3e443c9b66a3eff5c7 (tag: v0.0.5, CU5) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
       { "version":"v0.0.4","commitId":"commit d12c9c7adb7e0eec6570ba00a5c8907a705eb4b7 (HEAD -> CU5, tag: v0.0.4, origin/develop, develop, CU4) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
       { "version":"v0.0.3","commitId":"commit 5036201538965b6d0b20cefbfbd7a3f3cdf0ae19  (CU3) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
@@ -31,6 +31,7 @@ export class CommitsService {
       {  "commit":"CU4:implementar bootstrap en el front Date: Sun Nov 4 13:50:14 2018 -0500 d12c9c7adb7e0eec6570ba00a5c8907a705eb4b7","version":"v0.0.4"},  
       {  "commit":"CU5:implementar proceso que permita visualizar las versiones Date: Sun Nov 4 14:53:52 2018 -0500 4e6654d06dfcc5a470987e3e443c9b66a3eff5c7","version":"v0.0.5"},  
       {  "commit":"CU6:implementar proceso que permita crear la base de datos alegra en mysql Date: Sun Nov 4 15:00:37 2018 -0500 07003c35bf50b48c0be78e6f075e1bb66c3db051","version":"v0.0.6"},  
+      {  "commit":"CU7:implementar proceso que permita tener una api rest para la entidad celdas Date: Sun Nov 4 15:33:19 2018 -0500 5dfb2dec153b074f7fa79b40307d7d485af13524","version":"v0.0.7"},  
       
     ]
   }
