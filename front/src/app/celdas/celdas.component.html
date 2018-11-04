@@ -1,0 +1,7 @@
+<div *ngFor="let pares of celdas">
+   <div class="card pointer"  *ngFor="let item of pares" (click)="pagarValidando(item)"  [ngClass]="item.color" style="max-width: 18rem;">
+      <h4>{{item.nombre}}</h4>
+      <strong *ngIf="item.placa">Placa</strong>
+      <h5 >{{item.placa}}</h5>   
+    </div>
+</div>

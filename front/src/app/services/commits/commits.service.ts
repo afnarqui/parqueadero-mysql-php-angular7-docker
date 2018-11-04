@@ -12,6 +12,8 @@ export class CommitsService {
   buscarValores(){
     this.datosCommit = []
     this.datosCommit = [
+      { "version":"v0.0.9","commitId":"commit cbf1fedca4a9dca54d92fa49f22b274d98857049 (HEAD -> C10, tag: v0.0.9, origin/develop, develop, CU9) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
+      { "version":"v0.0.8","commitId":"commit f6fe58aa330aac05697646a1345bb412e0e3e704  (tag: v0.0.8, CU8) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
       { "version":"v0.0.7","commitId":"commit 5dfb2dec153b074f7fa79b40307d7d485af13524  (HEAD -> CU8, tag: v0.0.7, origin/develop, develop, CU7) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
       { "version":"v0.0.6","commitId":"commit 07003c35bf50b48c0be78e6f075e1bb66c3db051  (HEAD -> CU7, tag: v0.0.6, origin/develop, develop, CU6) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
       { "version":"v0.0.5","commitId":"commit 4e6654d06dfcc5a470987e3e443c9b66a3eff5c7 (tag: v0.0.5, CU5) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
@@ -32,6 +34,8 @@ export class CommitsService {
       {  "commit":"CU5:implementar proceso que permita visualizar las versiones Date: Sun Nov 4 14:53:52 2018 -0500 4e6654d06dfcc5a470987e3e443c9b66a3eff5c7","version":"v0.0.5"},  
       {  "commit":"CU6:implementar proceso que permita crear la base de datos alegra en mysql Date: Sun Nov 4 15:00:37 2018 -0500 07003c35bf50b48c0be78e6f075e1bb66c3db051","version":"v0.0.6"},  
       {  "commit":"CU7:implementar proceso que permita tener una api rest para la entidad celdas Date: Sun Nov 4 15:33:19 2018 -0500 5dfb2dec153b074f7fa79b40307d7d485af13524","version":"v0.0.7"},  
+      {  "commit":"CU8:implementar proceso que permita tener una api rest para la entidad vehículos Date: Sun Nov 4 16:10:33 2018 -0500 f6fe58aa330aac05697646a1345bb412e0e3e704","version":"v0.0.8"},  
+      {  "commit":"CU9:implementar proceso que permita tener una api rest para la entidad vehículosParqueados Date: Sun Nov 4 17:01:26 2018 -0500 cbf1fedca4a9dca54d92fa49f22b274d98857049","version":"v0.0.9"},  
       
     ]
   }
