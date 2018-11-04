@@ -9,14 +9,6 @@ import { VehiculosParqueados } from '../interfaces/VehiculosParqueados';
 })
 export class CeldasComponent implements OnInit {
   celdas:any;
-  arrayvehiculosparqueadero:VehiculosParqueados[] = [];
-  arrayvehiculos:any = {
-    id:null,
-    placa:null,
-    marca:null,
-    created_at:null,
-    update_at:null
-}
   constructor(private servicioCeldas:CeldasService) { }
 
   ngOnInit() {
