@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card text-white bg-info mb-3" *ngFor="let item of datosCommit">
+    <div class="card-header">{{item.version}} 
+      <textarea >{{item.commitId}}</textarea> 
+    </div>
+    <div class="card-body">
+      <div class="list-group"  *ngFor="let itemdos of datosCommitReal">
+          <ul class="list-group">
+              <li class="textareaMensaje" *ngIf="itemdos.version===item.version" 
+                (click)="armarInforme(itemdos.nombre)">{{itemdos.commit}}</li>
+          </ul>
+      </div>
+    </div>
+</div>
+</div>
