@@ -1,0 +1,37 @@
+
+<div class="container">
+   
+    <div class="row" style="cursor:pointer">
+      <div class="col-sm" *ngFor="let item of datosPaginaSeguridad">
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+          <div class="card-header">{{item.titulo}}</div>
+          <div class="card-body">
+            <div class="list-group"  *ngFor="let itemdos of datosPaginaSeguridadReal">
+                <ul class="list-group">
+                    <li class="list-group-item disabled" *ngIf="itemdos.id===item.id" (click)="armarInforme(itemdos.nombre)">{{itemdos.titulo}}</li>
+                </ul>
+            </div>
+          </div>
+     
+  
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+    <div *ngIf="visualizarDescarga">
+        <button type="button" class="btn btn-info" (click)="descargar('archivo')">Descargar</button> 
+    </div>   
+  <table style="width:100%;height:100%;color:rgb(255, 255, 255);background-color:rgb(206, 206, 226);" border="5" class="data-table">
+     
+  
+    <tr>
+        <td *ngFor="let header of parseDataHeader" text-center><b>{{ header}}</b></td>
+    </tr>
+    <tr style="width:100%;height:100%;color:rgb(255, 255, 255);background-color:rgb(253, 255, 251);" *ngFor="let row of parsedDataReal; let i = index" >
+      <td *ngFor="let data of row; let j = index; trackBy: trackByFn">
+          <input type="text"  [(ngModel)]="parsedDataReal[i][j]">
+      </td>
+    </tr>
+  </table>
