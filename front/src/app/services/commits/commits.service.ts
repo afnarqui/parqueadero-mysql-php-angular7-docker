@@ -12,6 +12,7 @@ export class CommitsService {
   buscarValores(){
     this.datosCommit = []
     this.datosCommit = [
+      { "version":"v1.0.1","commitId":"commit e2bb12305fe94cc21dd956fd68942ef61a2369be  (HEAD -> master, tag: v1.0.1, tag: v0.0.11, origin/master, origin/develop, develop, CU11) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
       { "version":"v0.0.10","commitId":"commit fbb33214bddbe82f40f317e0a90ba3ff38628385  (HEAD -> develop, tag: v0.0.10, origin/develop, C10) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
       { "version":"v0.0.9","commitId":"commit cbf1fedca4a9dca54d92fa49f22b274d98857049 (HEAD -> C10, tag: v0.0.9, origin/develop, develop, CU9) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
       { "version":"v0.0.8","commitId":"commit f6fe58aa330aac05697646a1345bb412e0e3e704  (tag: v0.0.8, CU8) Andres Felipe Naranjo Quintero andresnaranjo@afnarqui.com"},
@@ -39,6 +40,7 @@ export class CommitsService {
       {  "commit":"CU10 refactorizar código Date: Sun Nov 4 17:35:43 2018 -0500 895607d370c6d275aece205ecd5be4699db944c1,737b0db244b0ae64c33f906c8d2b2fe6c5f2b777","version":"v0.0.10"},  
       {  "commit":"CU10-A implementar proceso que permita buscar los vehículos Date: Sun Nov 4 17:54:42 2018 -0500 ","version":"v0.0.10"},  
       {  "commit":"CU10-B implementar proceso que permita generar funcionalidades con el vehículos Date: Sun Nov 4 17:54:42 2018 -0500 fbb33214bddbe82f40f317e0a90ba3ff38628385","version":"v0.0.10"},  
+      {  "commit":"CU11 implementar proceso que permita visualizar los informes Date: Sun Nov 4 19:31:50 2018 -0500 e2bb12305fe94cc21dd956fd68942ef61a2369be","version":"v1.0.1"},  
       
     ]
   }
@@ -47,6 +49,8 @@ export class CommitsService {
     return [this.datosCommit,this.datosCommitReal]
   }
 }
+
+
 
 
 
