@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { environment } from '../../../environments/environment'
 import { VehiculosParqueados } from 'src/app/interfaces/VehiculosParqueados';
 import { VehiculosParqueadosService } from '../vehiculosparqueados/vehiculos-parqueados.service';
@@ -24,6 +24,13 @@ export class CeldasService {
       return this.http.get(`${this.url}/celdas`)
     }
 
+    getAlegra(){
+      return this.http.get(`https://app.alegra.com/api/v1/contacts`)
+    }    
+
+    guardarFacturaAlegra(){
+
+    }
   
     buscarValorPagar(fechaentrada:any){
       let fechafinal = this.devolverFecha();
@@ -163,4 +170,39 @@ export class CeldasService {
     
     return cantidad
    }
+   guardarAlegra(vehiculosparqueados:VehiculosParqueados){
+    
+    let valorPagar = this.buscarValor(vehiculosparqueados.fecha_entrada)
+    const headers = new HttpHeaders({'Content-Type':'application/json'});
+
+    let dataAlegra =
+    {
+      "date":vehiculosparqueados.fecha_entrada,
+      "dueDate": vehiculosparqueados.fecha_entrada,
+      "client": 1,
+      "items" : [
+        {
+          "id": 1,
+          "price" : 30,
+          "quantity" : valorPagar
+          }
+        ]
+    }
+    return this.http.post(`https://app.alegra.com/api/v1/invoices`,dataAlegra,{headers:headers});
+            
+           
+
+  }
+
+  buscarValor(fechaentrada:any){
+    let fechafinal = this.devolverFecha();
+    var fecha1 = moment(fechaentrada);
+    var fecha2 = moment(fechafinal);
+    let segundos = fecha2.diff(fecha1, 's');
+    let valor = segundos;
+
+    return valor;
+ 
+  }  
+  
   }

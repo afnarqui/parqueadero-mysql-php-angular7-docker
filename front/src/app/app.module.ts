@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { CommitsComponent } from './commits/commits.component';
 import { Route, RouterModule } from '@angular/router';
 import { CeldasComponent } from './celdas/celdas.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { InformesComponent } from './informes/informes.component'
 import { PapaParseModule } from 'ngx-papaparse';
+import { interceptor } from './services/interceptor'
 
 const routes: Route[] = [
   {path: '', component: CeldasComponent},
@@ -34,9 +35,14 @@ const routes: Route[] = [
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    PapaParseModule,    
+    PapaParseModule,   
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass:interceptor,
+    multi:true
+  }],
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
