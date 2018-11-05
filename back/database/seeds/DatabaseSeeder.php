@@ -12,10 +12,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->truncartablas([
-            'celdas'
+            'celdas',
+            'vehiculos'
         ]);
 
         $this->call(CeldasSeeder::class);
+        $this->call(VehiculosSeeder::class);
     }
     protected function truncartablas(array $tables){
         DB::statement('SET FOREIGN_KEY_CHECKS = 0;');

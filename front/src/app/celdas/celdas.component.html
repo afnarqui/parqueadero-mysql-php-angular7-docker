@@ -1,3 +1,26 @@
+ <!-- <div class="form-group">
+    <label for="name" class="center">Ingrese la placa {{namealegra}}</label>
+    <input class="form-control" [(ngModel)]="vehiculo.placa" placeholder="Ingrese la placa" type="text" #placaafn (keydown)="buscarPlaca(placaafn,i)">
+  
+   <div >  
+<button [hidden]="true"  *ngIf="formStatebool" type="button" class="large-padding pointer no-background light-text" 
+  (click)="toggleForm()">
+      {{label()}}
+    </button> 
+      <div *ngIf="formStatebool" class="form-group">
+        <input type="text" [(ngModel)]="vehiculo.marca"  class="form-control"  placeholder="Ingrese la marca" >
+      </div>
+      <div *ngIf="!editar">
+        <div *ngIf="formStatebool" class="form-group">
+          <button type="submit" class="btn colorboton btn-block" (click)="guardar()" >{{textoboton}}</button> 
+        </div>
+      </div> 
+       </div>
+       <div *ngIf="formStatebool" class="form-group">
+          <button type="submit" class="btn colorboton btn-block" (click)="limpiar()">Limpiar</button> 
+        </div>
+</div> 
+
 <div *ngFor="let pares of celdas">
    <div class="card pointer"  *ngFor="let item of pares" (click)="pagarValidando(item)"  [ngClass]="item.color" style="max-width: 18rem;">
       <h4>{{item.nombre}}</h4>
@@ -5,3 +28,104 @@
       <h5 >{{item.placa}}</h5>   
     </div>
 </div>
+<hr/>
+<table *ngIf="this.arrayvehiculosparqueaderoProcesados.length>0" class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Celda</th>
+        <th scope="col">Placa</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Valor a pagar</th>
+        <th scope="col">Tiempo transcurrido</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of arrayvehiculosparqueaderoProcesados">
+          <td>{{item.id}}</td>
+          <td>{{item.nombrecelda}}</td>
+          <td>{{item.placavehiculo}}</td>
+          <td>{{item.marcavehiculo}}</td>
+          <td>{{item.valorpagar | number}} </td>
+          <td>{{item.cadena}}</td>
+        <th><button type="submit" class="btn colorboton btn-block" (click)="Pagar(item)">Pagar</button> </th>
+      </tr>
+    
+    </tbody>
+  </table> 
+   -->
+
+   <div class="form-group">
+      <label for="name" class="center">Ingrese la placa {{namealegra}}</label>
+    <input class="form-control" [(ngModel)]="vehiculo.placa" placeholder="Ingrese la placa" type="text" #placaafn (keydown)="buscarPlaca(placaafn,i)">
+     <div > 
+    <button [hidden]="true"  *ngIf="formStatebool" type="button" class="large-padding pointer no-background light-text" 
+    (click)="toggleForm()">
+        {{label()}}
+     
+      </button> 
+        <div *ngIf="formStatebool" class="form-group">
+          <input type="text" [(ngModel)]="vehiculo.marca"  class="form-control"  placeholder="Ingrese la marca" >
+        </div>
+        <div *ngIf="!editar">
+          <div *ngIf="formStatebool" class="form-group">
+            <button type="submit" class="btn colorboton btn-block" (click)="guardar()" >{{textoboton}}</button> 
+          </div>
+        </div>
+        
+  
+        </div>
+       
+         <div *ngIf="formStatebool" class="form-group">
+            <button type="submit" class="btn colorboton btn-block" (click)="limpiar()">Limpiar</button> 
+          </div>
+        
+      
+  </div>
+  
+  
+  <div *ngFor="let pares of celdas">
+    
+      <div class="card pointer"  *ngFor="let item of pares" (click)="pagarValidando(item)"  [ngClass]="item.color" style="max-width: 18rem;">
+        
+        
+        <h4>{{item.nombre}}</h4>
+        <strong>Placa</strong>
+        <h5 >{{item.placa}}</h5>   
+        
+            
+          
+          
+        </div>
+      </div>
+  
+  
+      <hr/>
+     <table *ngIf="this.arrayvehiculosparqueaderoProcesados.length>0" class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Celda</th>
+          <th scope="col">Placa</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Valor a pagar</th>
+          <th scope="col">Tiempo transcurrido</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of arrayvehiculosparqueaderoProcesados">
+            <td>{{item.id}}</td>
+            <td>{{item.nombrecelda}}</td>
+            <td>{{item.placavehiculo}}</td>
+            <td>{{item.marcavehiculo}}</td>
+            <td>{{item.valorpagar | number}} </td>
+            <td>{{item.cadena}}</td>
+          <th><button type="submit" class="btn colorboton btn-block" (click)="Pagar(item)">Pagar</button> </th>
+        </tr>
+      
+      </tbody>
+    </table> 
+    
+   
